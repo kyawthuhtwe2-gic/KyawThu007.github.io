@@ -867,50 +867,78 @@ section:nth-child(odd) .animate.scroll,
 }
 .more {
     display: none;
-    position: fixed; 
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
     transition: opacity 0.3s ease;
 }
 .more-content {
     position: relative;
     background-color: var(--second-bg-color);
-    border-radius: 8px;
-    margin:20rem auto;
-    padding: 3rem;
-    width: 90%;
-    max-width: 50rem;
-    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 0.5s ease-out;
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 56rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    box-shadow: 0 .8rem 2rem rgba(0, 0, 0, 0.35);
+    text-align: left;
+    margin: auto;
+    animation: fadeIn 0.4s ease-out;
+}
+.more-content h3 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
 }
 .more-content .close-btn {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.2rem;
+    right: 1.2rem;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.08);
     color: var(--text-color);
     font-size: 2.4rem;
     line-height: 1;
     cursor: pointer;
-    transition: background .3s ease, color .3s ease;
+    border: .1rem solid rgba(255, 255, 255, 0.15);
+    transition: background .3s ease, color .3s ease, transform .3s ease;
 }
 .more-content .close-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.16);
     color: var(--main-color);
+    transform: scale(1.05);
 }
 .more-content p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--text-color);
-    text-align: justify;
+    text-align: left;
+    line-height: 1.8;
+}
+.more-details {
+    margin-top: 1.8rem;
+}
+.more-details p {
+    margin-bottom: 1rem;
+}
+.more-details ul {
+    list-style: disc inside;
+    color: var(--text-color);
+}
+.more-details li {
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+    line-height: 1.7;
 }
 
  /* Animation for fading in */
