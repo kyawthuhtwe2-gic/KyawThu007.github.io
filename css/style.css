@@ -473,7 +473,7 @@ span{
 }
 .projects{
     min-height: auto;
-    padding-bottom: 7rem;
+    padding-bottom: 20rem;
     background: linear-gradient(135deg, rgba(0, 171, 240, 0.08), rgba(17, 46, 66, 0.95));
 }
 .projects h2{
