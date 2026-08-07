@@ -270,7 +270,7 @@ span{
 .about-grid{
     display: grid;
     grid-template-columns: repeat(3, minmax(18rem, 1fr));
-    gap: 2rem;
+    gap: 4rem;
     width: 100%;
     max-width: 120rem;
 }
@@ -326,6 +326,28 @@ span{
     padding: 1rem 1.2rem;
     background: rgba(255, 255, 255, 0.04);
     border-radius: .9rem;
+}
+@media (max-width:900px) {
+    .about-grid{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        justify-items: center;
+    }
+    .about-card{
+        width: 100%;
+        max-width: 48rem;
+    }
+}
+@media (max-width:780px) {
+    .about-grid{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        justify-items: center;
+    }
+    .about-card{
+        width: 100%;
+        max-width: 48rem;
+    }
 }
 .about-actions{
     display: flex;
@@ -575,6 +597,14 @@ span{
     }
 }
 @media (max-width:900px){
+    .project-carousel-wrapper{
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
+        align-items: center;
+    }
+    .project-nav{
+        display: inline-flex;
+    }
     .projects-grid{
         gap: 1.2rem;
     }
@@ -585,14 +615,44 @@ span{
 }
 @media (max-width:780px){
     .project-carousel-wrapper{
-        grid-template-columns: 1fr;
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
+        align-items: center;
+    }
+    .project-carousel{
+        width: 100%;
+    }
+    .projects-grid{
+        width: 100%;
+        gap: 1.5rem;
     }
     .project-card{
         min-width: 100%;
         max-width: 100%;
+        flex: 0 0 100%;
     }
     .project-nav{
-        display: none;
+        display: inline-flex;
+    }
+}
+@media (max-width:900px){
+    .contact-panel{
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    .contact form .input-box{
+        grid-template-columns: 1fr;
+    }
+    .btn-row{
+        justify-content: center;
+    }
+}
+@media (max-width:780px){
+    .contact-panel{
+        padding: 1.8rem 1.2rem;
+    }
+    .contact form .textarea-field textarea{
+        min-height: 16rem;
     }
 }
 .project-card:hover{
