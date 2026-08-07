@@ -376,7 +376,7 @@ span{
 }
 .education .education-row{
     display: grid;
-    grid-template-columns: repeat(3, minmax(28rem, 1fr));
+    grid-template-columns: repeat(1, minmax(28rem, 1fr));
     gap: 5rem;
     width: 100%;
     max-width: 120rem;
@@ -1171,6 +1171,9 @@ section:nth-child(odd) .animate.scroll,
     .education .education-row{
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+    .education-row .education-column{
+        width: 100%;
     }
     .contact form .input-box .input-field{
         width: 100%;
